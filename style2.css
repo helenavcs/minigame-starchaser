@@ -1,0 +1,160 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.comfortaa {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: bold;
+  }
+
+
+body {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: comfortaa;
+    font-size: 10px;
+    color: #ffffff;
+    background-color: #ffffff;
+
+    
+    background-image: linear-gradient(45deg, #10078b,  #090364,  #03001f);
+    
+    background-attachment: fixed;
+    background-size: 500%;
+    animation: backgroundAnimation 20s infinite ease;
+}
+
+h1 {
+    margin-bottom: 20px;
+    filter: opacity(50%);
+}
+
+canvas {
+        border: 2px solid #00000000;
+        background-color: #ffffff00;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+        display: block;
+        margin: 0 
+}
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffffff;
+}
+
+
+@keyframes anima{
+    0%{
+        transform: translateY(100vh) scale(0) rotate(0deg);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1) rotate(360deg);
+    }
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.overlaid-text {
+    position: fixed;
+    top: 50%; /* Ajuste conforme necessário */
+    left: 50%; /* Ajuste conforme necessário */
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    z-index: 1000; /* Valor alto para garantir que fique sobreposto */
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0); /* Fundo semi-transparente */
+    padding: 10px;
+    
+}
+.icone{
+    width: 80px;
+    height: 30px;
+    background-image: url('star-fill.svg') ;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(100%) opacity(50%);
+    animation: anima linear infinite;
+    animation-duration: calc(300s / var(--i));
+}
+
+@keyframes backgroundAnimation{
+    0%, 100%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+
+}
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    .fade-in-text {
+        animation: fadeIn 5s ease-in-out;
+        
+        text-align: center;
+        margin-top: 17%;
+    }
+
+
+    .animated-point {
+        animation: clickAnimation 0.5s ease-in-out;
+        ;
+ 
+        transition: opacity 1s ease-out; 
+   
+    }
+    
+    @keyframes clickAnimation {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.5); }
+        100% { transform: scale(1); }
+    }
+    
+
+
+.wave-text span {
+    display: inline-block;
+    animation: wave 1s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+}
+
+/* Adicione esta regra ao seu arquivo CSS */
+.canvas-fade {
+  opacity: 1;
+  transition: opacity 1s ease-out; /* Transição suave de opacidade */
+}
+
+.canvas-hidden {
+  opacity: 0;
+}
