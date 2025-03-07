@@ -79,12 +79,12 @@ button:hover {
 
 .overlaid-text {
     position: fixed;
-    top: 50%; /* Ajuste conforme necessário */
-    left: 50%; /* Ajuste conforme necessário */
-    transform: translate(-50%, -50%); /* Centraliza o texto */
-    z-index: 1000; /* Valor alto para garantir que fique sobreposto */
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1000; 
     color: #fff;
-    background-color: rgba(0, 0, 0, 0); /* Fundo semi-transparente */
+    background-color: rgba(0, 0, 0, 0); 
     padding: 10px;
     
 }
@@ -149,10 +149,10 @@ button:hover {
     50% { transform: translateY(-2px); }
 }
 
-/* Adicione esta regra ao seu arquivo CSS */
+
 .canvas-fade {
   opacity: 1;
-  transition: opacity 1s ease-out; /* Transição suave de opacidade */
+  transition: opacity 1s ease-out; 
 }
 
 .canvas-hidden {
