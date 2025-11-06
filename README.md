@@ -3,7 +3,7 @@
 
 Ligue as estrelas entre si e descubra constelações!
 Este minijogo foi feito utilizando apenas HTML, CSS e JavaScript.
-
+- Não responsivo
 
 
 
